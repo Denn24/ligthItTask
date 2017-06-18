@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2863408147">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="MySQL - itNavigator@localhost" uuid="143855fb-3e26-43d9-97a4-a9c18f3b5a0b">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -41,6 +41,12 @@
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
         </library>
       </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="practicum@localhost" uuid="8de72a1e-251a-40d9-a74b-ad69dd262c1c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/practicum</jdbc-url>
     </data-source>
   </component>
 </project>

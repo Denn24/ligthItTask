@@ -37,4 +37,5 @@ public abstract class GenericDAOImpl<T> implements GenericDAO<T> {
     public void updateAll(List<T> list) {
         list.forEach(item -> update(item));
     }
+
 }

@@ -29,10 +29,10 @@
         <property name="suffix" value=".jsp"/>
     </bean>
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/itNavigator"/>
-        <property name="username" value="root"/>
-        <property name="password" value=""/>
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/practicum"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="root"/>
     </bean>
 
     <bean id="sessionFactory"
@@ -41,19 +41,21 @@
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">
-                    org.hibernate.dialect.MySQL5Dialect
+                    org.hibernate.dialect.PostgreSQL95Dialect
                 </prop>
                 <prop key="hibernate.show_sql">
                     true
                 </prop>
                 <prop key="hibernate.format_sql">true</prop>
-                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/itNavigator</prop>
-                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+                <prop key="hibernate.connection.url">jdbc:postgresql://localhost:5432/practicum</prop>
+                <prop key="hibernate.connection.driver_class">org.postgresql.Driver</prop>
+                <prop key="hibernate.hbm2ddl.auto">validate</prop>
+                <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
             </props>
         </property>
 
         <property name="packagesToScan">
-            <value>it.navigator</value>
+            <value>it.navigator.entity</value>
         </property>
     </bean>
 
