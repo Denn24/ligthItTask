@@ -14,7 +14,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd
         ">
-
+    <import resource="security-config.xml"/>
     <!-- Step 3: Add support for component scanning -->
     <context:component-scan base-package="it.navigator"/>
 
@@ -30,7 +30,7 @@
     </bean>
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/practicum"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/ligthIt"/>
         <property name="username" value="postgres"/>
         <property name="password" value="root"/>
     </bean>
@@ -47,10 +47,11 @@
                     true
                 </prop>
                 <prop key="hibernate.format_sql">true</prop>
-                <prop key="hibernate.connection.url">jdbc:postgresql://localhost:5432/practicum</prop>
+                <prop key="hibernate.connection.url">jdbc:postgresql://localhost:5432/ligthIt</prop>
                 <prop key="hibernate.connection.driver_class">org.postgresql.Driver</prop>
                 <prop key="hibernate.hbm2ddl.auto">validate</prop>
                 <prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+                <prop key="default_schema">public</prop>
             </props>
         </property>
 

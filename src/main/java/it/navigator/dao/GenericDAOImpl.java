@@ -22,6 +22,15 @@ public abstract class GenericDAOImpl<T> implements GenericDAO<T> {
         type = (Class) pt.getActualTypeArguments()[0];
     }
 
+    @Override
+    public T findById(Long id){
+        return sessionFactory.getCurrentSession().get(type, id);
+    }
+
+    @Override
+    public void save(T type){
+        sessionFactory.getCurrentSession().save(type);
+    }
 
     @Override
     public List<T> getAll() {

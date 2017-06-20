@@ -48,5 +48,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/practicum</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="ligthIt@localhost" uuid="a35706f4-1293-4f28-bec7-70ba117f5276">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/ligthIt</jdbc-url>
+    </data-source>
   </component>
 </project>
